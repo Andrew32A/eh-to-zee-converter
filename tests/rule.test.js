@@ -1,40 +1,46 @@
 const RuleTester = require("eslint").RuleTester;
-import rule from "../src/canadianToAmerican"; // TODO: need to fix import
+const rule = require("../src/canadianToAmerican.ts").default;
 
 const ruleTester = new RuleTester({
+  parser: require.resolve("@typescript-eslint/parser"),
   parserOptions: {
     ecmaVersion: 2020,
-    sourceType: "module",
   },
 });
 
-ruleTester.run("no-canadian-words", rule, {
+ruleTester.run("canadian-to-american", rule, {
   valid: [
-    {
-      code: `const color = "blue";`,
-    },
-    {
-      code: `const center = "middle";`,
-    },
+    `const color = "red";`,
+    `let program = "ESLint";`,
+    `function behavior() {}`,
   ],
   invalid: [
     {
-      code: `const colour = "blue";`,
+      code: `const colour = "red";`,
       errors: [
         {
           message: "Use American spelling. Change 'colour' to 'color'.",
         },
       ],
-      output: `const color = "blue";`,
+      output: `const color = "red";`,
     },
     {
-      code: `const centre = "middle";`,
+      code: `let programme = "ESLint";`,
       errors: [
         {
-          message: "Use American spelling. Change 'centre' to 'center'.",
+          message: "Use American spelling. Change 'programme' to 'program'.",
         },
       ],
-      output: `const center = "middle";`,
+      output: `let program = "ESLint";`,
+    },
+    {
+      code: `function behaviour() {}`,
+      errors: [
+        {
+          message: "Use American spelling. Change 'behaviour' to 'behavior'.",
+        },
+      ],
+      output: `function behavior() {}`,
     },
   ],
 });
