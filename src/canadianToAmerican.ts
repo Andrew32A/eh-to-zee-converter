@@ -1,5 +1,4 @@
 import { Rule } from "eslint";
-// import data = require("./data.json");
 
 const canadianToAmerican: Record<string, string> = {
   colour: "color",
