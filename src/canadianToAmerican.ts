@@ -1,41 +1,5 @@
 import { Rule } from "eslint";
-
-const canadianToAmerican: Record<string, string> = {
-  colour: "color",
-  neighbour: "neighbor",
-  honour: "honor",
-  favourite: "favorite",
-  travelling: "traveling",
-  theatre: "theater",
-  centre: "center",
-  defence: "defense",
-  plough: "plow",
-  programme: "program",
-  enrol: "enroll",
-  cancelled: "canceled",
-  licence: "license",
-  offence: "offense",
-  aerobics: "aerobic",
-  analogue: "analog",
-  dialogue: "dialog",
-  fulfil: "fulfill",
-  jewellery: "jewelry",
-  mould: "mold",
-  practise: "practice",
-  saviour: "savior",
-  tumour: "tumor",
-  ageing: "aging",
-  behaviour: "behavior",
-  fibre: "fiber",
-  labelling: "labeling",
-  meagre: "meager",
-  odour: "odor",
-  utilise: "utilize",
-  vigour: "vigor",
-  worshipping: "worshiping",
-  armour: "armor",
-  // add other word mappings as needed
-};
+import { canadianToAmerican } from "./data.json";
 
 const rule: Rule.RuleModule = {
   meta: {
