@@ -1,8 +1,8 @@
 {
   "name": "@andrew_dominican/eh-to-zee-converter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
-  "main": "index.ts",
+  "main": "./src/index.ts",
   "directories": {
     "test": "tests"
   },
