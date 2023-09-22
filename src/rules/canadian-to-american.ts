@@ -30,4 +30,4 @@ const rule: Rule.RuleModule = {
   },
 };
 
-export default rule;
+module.exports = rule;
