@@ -18,7 +18,7 @@ const rule = {
                 if (americanSpelling) {
                     context.report({
                         node: node,
-                        message: `Use American spelling. Change '${node.name}' to '${americanSpelling}'.`,
+                        message: `Change '${node.name}' to '${americanSpelling}'.`,
                         fix: function (fixer) {
                             return fixer.replaceText(node, americanSpelling);
                         },
