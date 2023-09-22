@@ -1,5 +1,5 @@
-const RuleTester = require("eslint").RuleTester;
-const rule = require("../src/rules/canadian-to-american.ts").default;
+import { RuleTester } from "eslint";
+import rule from "../src/rules/canadian-to-american"; // ts(1192): Had to use ES6 import syntax (module.exports = rule;) in canadian-to-american.ts to get package to work. Tests still pass though.
 
 const ruleTester = new RuleTester({
   parser: require.resolve("@typescript-eslint/parser"),
@@ -8,12 +8,20 @@ const ruleTester = new RuleTester({
   },
 });
 
+type TestCase = {
+  code: string;
+  errors?: {
+    message: string;
+  }[];
+  output?: string;
+};
+
 ruleTester.run("canadian-to-american", rule, {
   valid: [
     `const color = "red";`,
     `let program = "ESLint";`,
     `function behavior() {}`,
-  ],
+  ] as string[],
   invalid: [
     {
       code: `const colour = "red";`,
@@ -42,5 +50,5 @@ ruleTester.run("canadian-to-american", rule, {
       ],
       output: `function behavior() {}`,
     },
-  ],
+  ] as TestCase[],
 });
