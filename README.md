@@ -21,8 +21,14 @@ Add `eh-to-zee-converter` to the plugins section of your `.eslintrc` file and `e
 }
 ```
 
-Run following command to build dist folder:
+If you want to modify or add more rules in the src, make sure to build the dist folder with the following command:
 
 ```bash
 tsc
+```
+
+## Publishing
+
+```bash
+npm publish --access public
 ```
