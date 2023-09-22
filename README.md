@@ -20,3 +20,9 @@ Add `eh-to-zee-converter` to the plugins section of your `.eslintrc` file and `e
   }
 }
 ```
+
+If loading manually, run the following command to generate the rule:
+
+```bash
+tsc
+```
