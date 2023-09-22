@@ -1,5 +1,5 @@
 const RuleTester = require("eslint").RuleTester;
-const rule = require("../src/canadianToAmerican.ts").default;
+const rule = require("../src/rules/canadian-to-american.ts").default;
 
 const ruleTester = new RuleTester({
   parser: require.resolve("@typescript-eslint/parser"),

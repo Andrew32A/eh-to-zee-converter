@@ -1,5 +1,5 @@
 import { Rule } from "eslint";
-import { canadianToAmerican } from "./data/data.json";
+import { canadianToAmerican } from "../data/data.json";
 
 const rule: Rule.RuleModule = {
   meta: {

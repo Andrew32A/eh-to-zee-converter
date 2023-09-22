@@ -1,8 +1,8 @@
 {
-  "name": "@andrew_dominican/eh-to-zee-converter",
-  "version": "1.0.3",
+  "name": "eslint-plugin-eh-to-zee-converter",
+  "version": "1.1.0",
   "description": "",
-  "main": "./src/index.ts",
+  "main": "../eslint-plugin-eh-to-zee-converter/src/index.ts",
   "directories": {
     "test": "tests"
   },

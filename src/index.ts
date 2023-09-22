@@ -1,9 +1,5 @@
-import canadianToAmerican from "./canadianToAmerican";
-
-const rules = {
-  "canadian-to-american": canadianToAmerican,
-};
-
-export = {
-  rules,
+module.exports = {
+  rules: {
+    "canadian-to-american": require("./rules/canadian-to-american"),
+  },
 };
