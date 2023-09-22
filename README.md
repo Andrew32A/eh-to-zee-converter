@@ -21,7 +21,7 @@ Add `eh-to-zee-converter` to the plugins section of your `.eslintrc` file and `e
 }
 ```
 
-Run following command to build ts files to js files:
+Run following command to build dist folder:
 
 ```bash
 tsc
