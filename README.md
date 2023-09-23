@@ -1,5 +1,7 @@
 # Eh to Zee Converter
 
+https://www.npmjs.com/package/eslint-plugin-eh-to-zee-converter
+
 ## Installation
 
 npm:
