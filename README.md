@@ -1,10 +1,18 @@
 # Eh to Zee Converter
 
+![npm](https://img.shields.io/npm/v/eslint-plugin-eh-to-zee-converter)
+
 https://www.npmjs.com/package/eslint-plugin-eh-to-zee-converter
 
 ## Installation
 
-npm:
+You'll first need to install [ESLint](http://eslint.org) if you haven't done so already:
+
+```bash
+npm install eslint --save-dev
+```
+
+Next, install `eh-to-zee-converter`:
 
 ```bash
 npm install --save-dev eslint-plugin-eh-to-zee-converter
