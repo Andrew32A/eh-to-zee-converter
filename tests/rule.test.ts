@@ -27,7 +27,7 @@ ruleTester.run("canadian-to-american", rule, {
       code: `const colour = "red";`,
       errors: [
         {
-          message: "Use American spelling. Change 'colour' to 'color'.",
+          message: "Change 'colour' to 'color'.",
         },
       ],
       output: `const color = "red";`,
@@ -36,7 +36,7 @@ ruleTester.run("canadian-to-american", rule, {
       code: `let programme = "ESLint";`,
       errors: [
         {
-          message: "Use American spelling. Change 'programme' to 'program'.",
+          message: "Change 'programme' to 'program'.",
         },
       ],
       output: `let program = "ESLint";`,
@@ -45,7 +45,7 @@ ruleTester.run("canadian-to-american", rule, {
       code: `function behaviour() {}`,
       errors: [
         {
-          message: "Use American spelling. Change 'behaviour' to 'behavior'.",
+          message: "Change 'behaviour' to 'behavior'.",
         },
       ],
       output: `function behavior() {}`,
