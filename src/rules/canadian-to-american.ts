@@ -14,7 +14,7 @@ const rule: Rule.RuleModule = {
 
   create: function (context) {
     return {
-      Identifier(node: Rule.Node) {
+      Identifier(node: any) {
         const americanSpelling = canadianToAmerican[node.name];
         if (americanSpelling) {
           context.report({
@@ -30,4 +30,5 @@ const rule: Rule.RuleModule = {
   },
 };
 
+export default rule;
 module.exports = rule;
