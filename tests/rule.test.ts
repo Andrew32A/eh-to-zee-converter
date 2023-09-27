@@ -1,5 +1,5 @@
 import { RuleTester } from "eslint";
-import rule from "../src/rules/canadian-to-american"; // ts(1192): Had to use ES6 import syntax (module.exports = rule;) in canadian-to-american.ts to get package to work. Tests still pass though.
+import rule from "../src/rules/canadian-to-american";
 
 const ruleTester = new RuleTester({
   parser: require.resolve("@typescript-eslint/parser"),
