@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-eh-to-zee-converter",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "",
   "main": "dist/index.js",
   "directories": {
