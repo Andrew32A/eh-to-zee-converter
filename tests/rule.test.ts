@@ -1,5 +1,5 @@
 import { RuleTester } from "eslint";
-import rule from "../src/rules/canadian-to-american";
+const rule = require("../src/rules/canadian-to-american");
 
 const ruleTester = new RuleTester({
   parser: require.resolve("@typescript-eslint/parser"),
