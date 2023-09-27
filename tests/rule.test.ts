@@ -8,12 +8,14 @@ const ruleTester = new RuleTester({
   },
 });
 
-type TestCase = {
+type TestCaseError = {
+  message: string;
+};
+
+type InvalidTestCase = {
   code: string;
-  errors?: {
-    message: string;
-  }[];
-  output?: string;
+  errors: (string | TestCaseError)[];
+  output: string;
 };
 
 ruleTester.run("canadian-to-american", rule, {
@@ -50,5 +52,5 @@ ruleTester.run("canadian-to-american", rule, {
       ],
       output: `function behavior() {}`,
     },
-  ] as TestCase[],
+  ] as InvalidTestCase[],
 });
