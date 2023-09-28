@@ -1,5 +1,7 @@
 # Eh to Zee Converter
 
+<img src="https://github.com/Andrew32A/eh-to-zee-converter/blob/main/images/screenshot.png" align="center">
+
 ![npm](https://img.shields.io/npm/v/eslint-plugin-eh-to-zee-converter)
 
 https://www.npmjs.com/package/eslint-plugin-eh-to-zee-converter
