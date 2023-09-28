@@ -6,6 +6,8 @@
 
 https://www.npmjs.com/package/eslint-plugin-eh-to-zee-converter
 
+This is a custom eslint plugin that adds a rule to convert Canadian English to American English!
+
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org) if you haven't done so already:
