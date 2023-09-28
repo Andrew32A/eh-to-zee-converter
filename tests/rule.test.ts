@@ -1,5 +1,6 @@
 import { RuleTester } from "eslint";
-const rule = require("../src/rules/canadian-to-american");
+const ruleCanadianToAmerican = require("../src/rules/canadian-to-american");
+const ruleAmericanToCanadian = require("../src/rules/american-to-canadian");
 
 const ruleTester = new RuleTester({
   parser: require.resolve("@typescript-eslint/parser"),
@@ -18,7 +19,8 @@ type InvalidTestCase = {
   output: string;
 };
 
-ruleTester.run("canadian-to-american", rule, {
+// canadian to american
+ruleTester.run("canadian-to-american", ruleCanadianToAmerican, {
   valid: [
     `const color = "red";`,
     `let program = "ESLint";`,
@@ -51,6 +53,44 @@ ruleTester.run("canadian-to-american", rule, {
         },
       ],
       output: `function behavior() {}`,
+    },
+  ] as InvalidTestCase[],
+});
+
+// american to canadian
+ruleTester.run("american-to-canadian", ruleAmericanToCanadian, {
+  valid: [
+    `const colour = "red";`,
+    `let programme = "ESLint";`,
+    `function behaviour() {}`,
+  ] as string[],
+  invalid: [
+    {
+      code: `const color = "red";`,
+      errors: [
+        {
+          message: "Change 'color' to 'colour'.",
+        },
+      ],
+      output: `const colour = "red";`,
+    },
+    {
+      code: `let program = "ESLint";`,
+      errors: [
+        {
+          message: "Change 'program' to 'programme'.",
+        },
+      ],
+      output: `let programme = "ESLint";`,
+    },
+    {
+      code: `function behavior() {}`,
+      errors: [
+        {
+          message: "Change 'behavior' to 'behaviour'.",
+        },
+      ],
+      output: `function behaviour() {}`,
     },
   ] as InvalidTestCase[],
 });
