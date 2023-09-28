@@ -4,7 +4,7 @@
 
 ![npm](https://img.shields.io/npm/v/eslint-plugin-eh-to-zee-converter)
 
-This is a custom eslint plugin that adds a rule to convert Canadian English to American English! It's published to [NPM](https://www.npmjs.com/package/eslint-plugin-eh-to-zee-converter) for the public to download and use.
+This is a custom eslint plugin that adds a rule to check and convert Canadian English to American English and vice versa! It's published to [NPM](https://www.npmjs.com/package/eslint-plugin-eh-to-zee-converter) for the public to download and use.
 
 ## Installation
 
@@ -22,7 +22,7 @@ npm install --save-dev eslint-plugin-eh-to-zee-converter
 
 ## Usage
 
-Add `eh-to-zee-converter` to the plugins section of your `.eslintrc` file and `eh-to-zee-converter/canadian-to-american` to the list of rules. The `eslint-plugin-` prefix is optional:
+Add `eh-to-zee-converter` to the plugins section of your `.eslintrc` file and `eh-to-zee-converter/canadian-to-american` OR `eh-to-zee-converter/american-to-canadian` to the list of rules. The `eslint-plugin-` prefix is optional:
 
 ```json
 {
