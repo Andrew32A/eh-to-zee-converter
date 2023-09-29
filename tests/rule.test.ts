@@ -54,6 +54,24 @@ ruleTester.run("canadian-to-american", ruleCanadianToAmerican, {
       ],
       output: `function behavior() {}`,
     },
+    {
+      code: `const this_colour = "red";`,
+      errors: [
+        {
+          message: "Change 'this_colour' to 'this_color'.",
+        },
+      ],
+      output: `const this_color = "red";`,
+    },
+    {
+      code: `const thisColour = "red";`,
+      errors: [
+        {
+          message: "Change 'thisColour' to 'thisColor'.",
+        },
+      ],
+      output: `const thisColor = "red";`,
+    },
   ] as InvalidTestCase[],
 });
 
