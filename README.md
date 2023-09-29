@@ -4,7 +4,7 @@
 
 ![npm](https://img.shields.io/npm/v/eslint-plugin-eh-to-zee-converter)
 
-This is a custom eslint plugin that adds a rule to check and convert Canadian English to American English and vice versa! It's published to [NPM](https://www.npmjs.com/package/eslint-plugin-eh-to-zee-converter) for the public to download and use.
+This is a custom eslint plugin that adds rules to check and convert Canadian English to American English and vice versa! It's published to [NPM](https://www.npmjs.com/package/eslint-plugin-eh-to-zee-converter) for the public to download and use.
 
 ## Installation
 
