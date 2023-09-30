@@ -1,6 +1,7 @@
 import { Rule } from "eslint";
 import { canadianToAmerican } from "../data/data.json";
 
+// sort words by length so that we can replace the longest words first
 const sortedCanadianSpellings = Object.keys(canadianToAmerican).sort(
   (a, b) => b.length - a.length
 );
