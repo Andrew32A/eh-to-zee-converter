@@ -1,6 +1,10 @@
 import { Rule } from "eslint";
 import { canadianToAmerican } from "../data/data.json";
 
+const sortedCanadianSpellings = Object.keys(canadianToAmerican).sort(
+  (a, b) => b.length - a.length
+);
+
 const rule: Rule.RuleModule = {
   meta: {
     type: "problem",
@@ -15,11 +19,14 @@ const rule: Rule.RuleModule = {
   create: function (context) {
     return {
       Identifier(node: any) {
-        for (const canadianSpelling in canadianToAmerican) {
+        for (const canadianSpelling of sortedCanadianSpellings) {
           const lowercasedNodeName = node.name.toLowerCase();
-          if (lowercasedNodeName.includes(canadianSpelling.toLowerCase())) {
-            const regex = new RegExp(canadianSpelling, "i");
+          const regex = new RegExp(
+            `(?<=\\b|_|^|(?<=[a-z])[A-Z])${canadianSpelling}(?=\\b|_|$)`,
+            "i"
+          );
 
+          if (regex.test(lowercasedNodeName)) {
             const match = node.name.match(regex);
             let americanSpelling = canadianToAmerican[canadianSpelling];
 
